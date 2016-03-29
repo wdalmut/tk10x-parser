@@ -1,0 +1,28 @@
+{
+  "name": "tk10x-parser",
+  "version": "1.0.0",
+  "description": "gps tk104 parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node ./*_spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wdalmut/tk10x-parser.git"
+  },
+  "keywords": [
+    "gps",
+    "tk104"
+  ],
+  "author": "Walter Dal Mut <walter.dalmut@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wdalmut/tk10x-parser/issues"
+  },
+  "homepage": "https://github.com/wdalmut/tk10x-parser#readme",
+  "dependencies": {
+    "dmstodec": "^1.0.0",
+    "moment": "^2.12.0",
+    "underscore": "^1.8.3"
+  }
+}
