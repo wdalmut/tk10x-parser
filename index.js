@@ -5,7 +5,7 @@ var conv = require('dmstodec'),
 
 module.exports = function(message) {
   var data = {
-    "date": moment().format("YYYY-MM-DD HH:mm:ss"),
+    "date": moment().format(),
     "type": "UNKNOWN", "raw": message,
     "imei": false,
     "coord": false,
