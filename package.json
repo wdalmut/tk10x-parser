@@ -1,6 +1,6 @@
 {
   "name": "tk10x-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "gps tk104 parser",
   "main": "index.js",
   "scripts": {

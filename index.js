@@ -30,10 +30,19 @@ module.exports = function(message) {
     return data;
   }
 
-  if (tokens[4] == "F") {
-    data.type = "DATA";
-    data.coord = conv(tokens[7]+tokens[8], tokens[9]+tokens[10]);
-    data.speed = tokens[11]/1;
+  if (["F", "L"].indexOf(tokens[4]) >= 0) {
+    switch(tokens[4]) {
+      case "F":
+        data.type = "DATA";
+        data.coord = conv(tokens[7]+tokens[8], tokens[9]+tokens[10]);
+        data.speed = tokens[11]/1;
+        break;
+      case "L":
+        data.type = "LOST";
+        data.coord = {"lat": false, "lon": false};
+        data.speed = false;
+        break;
+    }
   }
 
   data.message = tokens[1];

@@ -25,4 +25,15 @@ describe("check the parsing strategy", function() {
     expect(0).toEqual(data.speed);
     expect("help me", data.message);
   });
+
+  it("should recognize the missing position data statement", function() {
+    var data = parse("imei:359586015829802,tracker,160712071423,,L,,,8a51,,3452,,,");
+
+    expect("LOST").toEqual(data.type);
+    expect("359586015829802").toEqual(data.imei);
+    expect(false).toEqual(data.coord.lat);
+    expect(false).toEqual(data.coord.lon);
+    expect(false).toEqual(data.speed);
+    expect("tracker", data.message);
+  });
 });
